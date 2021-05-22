@@ -290,3 +290,5 @@ document.querySelector('.nav__links').addEventListener('click', function (el) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
+
+//new line added
