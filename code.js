@@ -282,12 +282,12 @@ console.log(random(1, 99));
 // modali.classList.add('modali');
 // header.append(modali.clone(true));
 
-document.querySelector('.nav__links').addEventListener('click', function (el) {
-  el.preventDefault();
-  console.log(el.target);
-  if (el.target.classList.contains('.nav__link')) {
-    const id = el.target.getAttribute('href');
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    console.log('link');
   }
 });
 
