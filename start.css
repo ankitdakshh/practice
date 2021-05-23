@@ -22,3 +22,51 @@ body {
 div {
   padding: 0;
 }
+.btn {
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+.span {
+  background-color: black;
+  color: white;
+}
+.operation-content {
+  display: none;
+
+  /* JUST PRESENTATIONAL */
+  font-size: 1.7rem;
+  padding: 2.5rem 7rem 6.5rem 7rem;
+}
+
+.operation-content-active {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  column-gap: 3rem;
+  row-gap: 0.5rem;
+}
+
+.operations__tab--active {
+  transform: translateY(-66%);
+}
+
+.operation__content p {
+  grid-column: 2;
+}
+
+.operation {
+  max-width: 100rem;
+  margin: 12rem auto 0 auto;
+
+  background-color: #fff;
+}
+
+.operations__tab-container {
+  display: flex;
+  justify-content: center;
+}
+
+.operations__tab {
+  margin-right: 2.5rem;
+  transform: translateY(-50%);
+}

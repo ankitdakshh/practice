@@ -292,3 +292,27 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 });
 
 //new line added
+
+const btn = document.querySelector('.btn');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const operationTab = document.querySelectorAll('.operations__tab');
+const operationTab1 = document.querySelector('.operations__tab--1');
+const operationTabActive = document.querySelector('.operations__tab--active');
+const operationContent = document.querySelectorAll('.operation-content');
+const operationContentActive = document.querySelector(
+  '.operation-content-active'
+);
+
+tabsContainer.addEventListener('click', function (e) {
+  console.log(e);
+  const clicked = e.target.closest('.operations__tab');
+
+  if (!clicked) return;
+  operationTab.forEach(t => t.classList.remove('operations__tab--active'));
+  operationContent.forEach(c => c.classList.remove('operation-content-active'));
+
+  clicked.classList.add('.operations__tab--active');
+  document
+    .querySelector(`.operation-content-${clicked.dataset.tab}`)
+    .classList.add('operation-content-active');
+});
